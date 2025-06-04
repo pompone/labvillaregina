@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Microbiología - Laboratorio Regional Salud Ambiental</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/areas.css" />
+  <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo-titulo">
+        <div class="logo"><img src="img/logo.jpg" alt="Logo" /></div>
+        <h1 class="titulo">Laboratorio Regional de Salud Ambiental Villa Regina</h1>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <div class="menu-hamburguesa" id="menu-hamburguesa">&#9776;</div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="#">Sectores</a>
+            <div class="submenu">
+              <a href="microbiologia.html">Microbiología</a>
+              <a href="fisicoquimica.html">Físicoquímica</a>
+              <a href="uresa.html">URESA</a>
+            </div>
+          </li>
+          <li><a href="quienesSomos.html">¿Quiénes somos?</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="social-icons-top-right">
+      <a href="https://www.facebook.com/LabSalAmbVR" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="container">
+      <section class="contenido">
+        <h2>Área de Microbiología</h2>
+        <p>En el área de Microbiología del laboratorio realizamos análisis microbiológicos de aguas y alimentos en general, verificando la presencia de microorganismos indicadores de contaminación, como coliformes, enterobacterias, mohos y levaduras, entre otros. Estos estudios son esenciales para evaluar la inocuidad y calidad sanitaria de los productos que llegan al consumidor.
+        Además, llevamos a cabo el ensayo de detección de <i>Trichinella spiralis</i> (triquina) en muestras cárnicas, especialmente de carne porcina, como parte de los controles preventivos que contribuyen a proteger la salud pública.</p>
+
+        <h3>Galería del laboratorio</h3>
+        <div class="slideshow">
+          <img src="img/micro1.webp" class="slide activo" alt="Lab_Microbiologia_1" />
+          <img src="img/micro2.webp" class="slide" alt="Lab_Microbiologia_2" />
+          <img src="img/micro3.webp" class="slide" alt="Lab_Microbiologia_3" />
+          <img src="img/micro4.webp" class="slide" alt="Lab_Microbiologia_4" />
+        </div>
+       
+        <div class="bloque-doble">
+            <div class="bloque">
+              <h3>Ensayos más frecuentes que se realizan</h3>
+              <ul>
+                <li>Recuento de coliformes totales y fecales</li>
+                <li>Detección de <i>Escherichia coli</i></li>
+                <li>Recuento de bacterias aerobias mesófilas</li>
+                <li>Detección de <i>Salmonella</i> spp.</li>
+                <li>Recuento de mohos y levaduras</li>
+              </ul>
+            </div>
+
+            <div class="bloque">
+              <h3>Matrices alimentarias más frecuentes</h3>
+              <ul>
+                <li>Agua</li>
+                <li>Productos lácteos</li>
+                <li>Dulces y mermeladas</li>
+                <li>Miel</li>
+                <li>Alimentos en general</li>
+              </ul>
+            </div>
+        </div>
+
+        <h3>Recolección de muestra de Agua </h3>
+        <ol class="lista-parentesis">
+          <li>
+            <b>Limpie la canilla:</b> Utilizando una tela limpia, frote la boca de salida para quitar cualquier suciedad que pudiera existir.
+          </li>
+          <li><b>Abra la canilla:</b> Abra completamente la canilla y deje correr el agua durante dos o tres minutos. Luego, ciérrela.
+          </li>
+          <li><b>Esterilice la canilla:</b> Esterilice la canilla durante un minuto con la llama encendida de un algodón remojado en alcohol.
+          </li>
+          <li><b>Abra la canilla antes de tomar la muestra:</b> Abra la canilla cuidadosamente y deje correr el agua durante 1–2 minutos.
+          </li>
+          <li><b>Abra el frasco esterilizado:</b> Desenrosque la tapa.
+          </li>
+          <li><b>Tome la muestra:</b> Mientras mantiene la tapa y la cubierta protectora hacia abajo para evitar la entrada de polvo portador de microorganismos, ponga inmediatamente el frasco debajo del chorro de agua y llénelo.
+          </li>
+          <li><b>No llene el frasco completamente:</b> Se debe dejar un pequeño espacio de aire para facilitar la agitación en el momento del análisis.
+          </li>
+          <li><b>Tape el frasco.</b></li>
+        </ol>
+
+        <div class="descarga-titulo-boton">
+          <p>Puede bajar el instructivo completo</p>
+          <a href="img/instructivo.pdf" download class="boton-descarga-peque" target="_blank">Descargar</a>
+        </div>
+        <p> Si posee alguna duda puntual, puede comunicarse con el sector completando el siguiente formulario.</p>
+        <h3>Responsable</h3>
+        <p>Dr. Sebastian Bravo.</p>
+
+        <h3 id="contacto">Contacto</h3>
+        <form id="micro-form" class="contacto-form" action="https://formspree.io/f/mldbbjgg" method="POST"
+          data-success="¡Mensaje enviado desde Microbiología con éxito!">
+          <!-- Campos ocultos para Formspree -->
+          <input type="hidden" name="formName" value="Microbiología" />
+          <input type="hidden" name="_subject" value="Nuevo mensaje – Microbiología" />
+
+          <div class="form-group">
+            <label for="micro-nombre">Nombre:</label>
+            <input type="text" id="micro-nombre" name="nombre" placeholder="Tu nombre" required minlength="2"
+              title="Ingresa al menos 2 caracteres" />
+          </div>
+
+          <div class="form-group">
+            <label for="micro-email">Email:</label>
+            <input type="email" id="micro-email" name="email" placeholder="tucorreo@ejemplo.com"
+              required title="Ingresa una dirección de correo válida" />
+          </div>
+
+          <div class="form-group">
+            <label for="micro-mensaje">Mensaje:</label>
+            <textarea id="micro-mensaje" name="mensaje" placeholder="Escribí tu mensaje…" required minlength="10"
+              title="Tu mensaje debe tener al menos 10 caracteres"></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <script src="js/formularios.js"></script>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span class="izquierda">&copy; 2025 Laboratorio Regional de Salud Ambiental – Villa Regina</span>
+      <span class="derecha">Desarrollado por <a href="https://pompone.github.io/CV_Pompone.github.io/#inicio" target="_blank">Alejandro M. Pompone</a></span>
+    </div>
+  </footer>
+
+  <!-- BOTÓN "ARRIBA" -->
+  <button id="btn-top" aria-label="Volver arriba" class="top-pill">↑ Arriba</button>
+  <script src="js/js.js"></script>
+
+</body>
+</html>

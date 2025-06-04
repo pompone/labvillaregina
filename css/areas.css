@@ -1,0 +1,233 @@
+/* ============================================================= */
+/*  micro.css – Área Microbiología + URESA + Fisicoquímica       */
+/*  (puedes renombrar .bloques-uresa a .bloques-area si prefieres)*/
+/* ============================================================= */
+
+/* ---------- Slideshow ---------------------------------------- */
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 350px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.slideshow:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.slide.activo { opacity: 1; }
+
+/* ---------- Bloques URESA (tarjetas) ------------------------- */
+.bloques-uresa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.bloque {
+  /* base */
+  flex: 1 1 200px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  /* centrado total */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centro vertical */
+  align-items: center;       /* centro horizontal */
+  text-align: center;        /* texto centrado */
+  min-height: 230px;         /* alto mínimo homogéneo */
+}
+
+.bloque h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #006400;
+}
+.bloque p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.coordinadora { 
+  margin-bottom: 2rem;   /* aire antes del formulario  */
+  font-weight: 600;      /* opcional: resaltar */
+}
+
+/* Icono oculto → aparece al hacer hover/focus ----------------- */
+.icono {
+  opacity: 0;
+  margin-left: .4rem;
+  transition: opacity .25s, transform .25s;
+  transform: translateX(-4px);
+  pointer-events: none;
+  font-size: 1rem;
+  color: #006400;
+}
+
+.bloque:hover .icono,
+.bloque:focus-within .icono {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- Listas numeradas tipo 1), 2)… -------------------- */
+.lista-parentesis {
+  list-style: none;
+  counter-reset: paso;
+  padding-left: 1.5rem;
+}
+.lista-parentesis li {
+  counter-increment: paso;
+  margin-bottom: 1rem;
+}
+.lista-parentesis li::before {
+  content: counter(paso) ") ";
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+.lista-parentesis b { font-weight: bold; }
+
+/* ---------- Botón descarga pequeño --------------------------- */
+.descarga-titulo-boton {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.boton-descarga-peque {
+  background: linear-gradient(45deg, #6b9f1f, #4d7a14);
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+.boton-descarga-peque:hover {
+  background: linear-gradient(45deg, #4d7a14, #6b9f1f);
+  transform: translateY(-1px);
+}
+
+/* ---------- Bloque doble (dos tarjetas con lista) ------------ */
+.bloque-doble {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-block: 1.5rem;
+}
+.bloque-doble .bloque { flex: 1 1 300px; }
+
+/* --- Lista con bullet verde perfectamente alineado ------------ */
+.bloque-doble ul{
+  list-style: none;          /* sin bullet nativo */
+  margin: 0;
+  padding: 0;
+}
+
+.bloque-doble li{
+  display: flex;             /* bullet + texto en fila */
+  align-items: flex-start;   /* bullet arriba alineado con primera línea */
+  gap: .55em;                /* distancia bullet-texto */
+  margin: .35rem 0;          /* respiro vertical */
+}
+
+.bloque-doble li::before{
+  content: "";
+  flex: 0 0 .45em;           /* ancho/alto fijos */
+  height: .45em;
+  background: #006400;       /* verde corporativo */
+  border-radius: 50%;        /* círculo perfecto */
+  margin-top: .4em;          /* ajuste vertical según fuente */
+}
+
+/* ============================================================= */
+/*  Bloques clickeables & modal genérico de imagen               */
+/* ============================================================= */
+
+.enlace-bloque, .bloque-btn {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  font: inherit;
+  text-align: left;
+}
+.enlace-bloque:hover,
+.enlace-bloque:focus-visible,
+.bloque-btn:hover,
+.bloque-btn:focus-visible {
+  box-shadow: 0 0 8px rgba(0,0,0,.2);
+  transform: translateY(-2px);
+  transition: box-shadow .25s, transform .25s;
+}
+
+/* ---------- Modal genérico de imagen ------------------------- */
+.img-modal {
+  position: fixed;
+  inset: 0;
+  display: none;              /* visible con .open */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.75);
+  z-index: 1000;
+}
+.img-modal.open { display: flex; animation: fadeIn .25s; }
+
+.img-modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  transform: scale(.85);
+  animation: zoomIn .25s forwards;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,.4);
+}
+.img-modal-content img { display: block; width: 100%; height: auto; }
+
+.img-modal-close {
+  position: absolute;
+  top: .25rem;
+  right: .5rem;
+  font-size: 2rem;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: .25rem;
+}
+.img-modal-close:hover,
+.img-modal-close:focus-visible { color: #ffbdbd; }
+
+/* ---------- Animaciones -------------------------------------- */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoomIn { to   { transform: scale(1); } }
+
+/* Reemplaza la regla al final de tu archivo micro.css */
+.bloques-uresa .enlace-bloque {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}

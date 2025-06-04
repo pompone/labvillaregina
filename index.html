@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- SEO  -->
+<meta name="description" content="Laboratorio Regional de Salud Ambiental. Análisis microbiológicos, físico-químicos y control sanitario en Villa Regina y alrededores.">
+<meta name="keywords" content="laboratorio, salud ambiental, microbiología, fisicoquímica, uresa, análisis de agua, análisis de alimentos, Villa Regina">
+<meta name="author" content="Laboratorio Regional de Salud Ambiental">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratorio Regional Salud Ambiental – Villa Regina</title>
+  <!-- favicon -->
+  <link rel="icon" href="img/icono.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/noticias.css" />
+  <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Título animado -->
+  <script>
+    (function() {
+      var txt = 'Laboratorio Regional de Salud Ambiental Villa Regina –  ';
+      var speed = 200;
+      function scrollTitle() {
+        txt = txt.substring(1) + txt.charAt(0);
+        document.title = txt;
+        setTimeout(scrollTitle, speed);
+      }
+      window.addEventListener('load', scrollTitle);
+    })();
+  </script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo-titulo">
+        <div class="logo">
+          <img src="img/logo.jpg" alt="Logo" />
+        </div>
+        <h1 class="titulo">Laboratorio Regional de Salud Ambiental Villa Regina</h1>
+      </div>
+      <div class="menu-hamburguesa" id="menu-hamburguesa">&#9776;</div>
+      <nav id="menu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li>
+            <a href="#">Sectores</a>
+            <div class="submenu">
+              <a href="microbiologia.html">Microbiología</a>
+              <a href="fisicoquimica.html">Físicoquímica</a>
+              <a href="uresa.html">URESA</a>
+            </div>
+          </li>
+          <li><a href="quienesSomos.html">¿Quiénes somos?</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="social-icons-top-right">
+      <a href="https://www.facebook.com/LabSalAmbVR" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="container layout">
+      <!-- CONTENIDO PRINCIPAL (izquierda) -->
+      <section class="contenido">
+        <h2>Bienvenidos al Laboratorio Regional de Salud Ambiental</h2>
+        <p>Bienvenidos al Laboratorio Regional de Salud Ambiental.
+            Somos uno de los tres laboratorios oficiales, pertenecientes al Ministerio de Salud de la Provincia de Rio Negro.</p>
+        <center>
+          <img src="img/lab.jpeg" class="imagen-contenido" alt="Foto del laboratorio" />
+        </center>
+        <h3>Ubicación</h3>
+        <div class="ubicacion-wrapper">
+  <!-- Mapa -->
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1013.5579412856813!2d-67.08480981458212!3d-39.098677471869195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses-419!2sar!4v1745586188290!5m2!1ses-419!2sar"
+              width="100%"
+              height="100%"
+              style="border:0; border-radius:15px; box-shadow:0 4px 8px rgba(0,0,0,0.3);"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+  <!-- Dirección -->
+  <div class="direccion-box">
+    <h4>Dirección</h4>
+    <p>Villa Regina – Río Negro</p>
+    <p>Calle Libertad 15</p>
+    <p>CP: 8336</p>
+  </div>
+</div>
+
+            
+
+        <h3 id="contacto">Contacto</h3>
+        
+        <form id="contact-form" class="contacto-form" action="https://formspree.io/f/mvgaakod" method="POST"
+          data-success="¡Mensaje enviado desde Contacto con éxito!">
+          <!-- campos ocultos para distinguir el formulario -->
+            <input type="hidden" name="formName" value="Contacto" />
+            <input type="hidden" name="_subject" value="Nuevo mensaje – Contacto" />
+
+            <div class="form-group">
+              <label for="contact-nombre">Nombre:</label>
+              <input type="text" id="contact-nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+
+            <div class="form-group">
+          <label for="contact-email">Email:</label>
+          <input type="email" id="contact-email" name="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-mensaje">Mensaje:</label>
+            <textarea id="contact-mensaje" name="mensaje" placeholder="Escribí tu mensaje…" required></textarea>
+          </div>
+
+        <button type="submit">Enviar</button>
+        </form>
+
+
+
+
+      </section>
+
+      <!-- SIDEBAR (derecha) -->
+      <aside class="menu-lateral">
+        <!-- CALENDARIO -->
+        <h3 id="titulo-calendario">Calendario</h3>
+        <div id="calendario"></div>
+        <br />
+
+        <!-- TEMPERATURA -->
+        <h3>Temperatura actual</h3>
+        <div class="weather-widget">
+          <span class="location">Villa Regina</span>
+          <i class="weather-icon fa-2x"></i>
+          <span class="weather-temp">-- °C</span>
+        </div>
+        
+
+        <!-- ENLACES DE INTERÉS -->
+        <h3>Enlaces de interés</h3>
+        <ul>
+          <li><a href="https://rionegro.gov.ar/" target="_blank">Río Negro</a></li>
+          <li><a href="https://dpa.rionegro.gov.ar/" target="_blank">DPA</a></li>
+          <li><a href="https://villaregina.gob.ar/" target="_blank">Municipio de Villa Regina</a></li>
+          <li class="menu-item has-submenu" id="menu-salud">
+            <div class="menu-header">
+              <a
+                href="https://salud.rionegro.gov.ar/"
+                class="parent-link"
+                target="_blank"
+                >Ministerio de Salud</a
+              >
+              <button
+                class="submenu-toggle"
+                aria-expanded="false"
+                aria-label="Mostrar submenú"
+              >
+                <span class="icon">▶</span>
+              </button>
+            </div>
+            <ul class="submenu-enlaces">
+              <li>
+                <a
+                  href="https://salud.rionegro.gov.ar/coordinacion-provincial-fiscalizacion-sanitaria"
+                  target="_blank"
+                  >Fiscalización Sanitaria</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://salud.rionegro.gov.ar/salud-ambiental"
+                  target="_blank"
+                  >Salud Ambiental</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://rionegro.sifega.anmat.gob.ar/login.php" target="_blank"
+              >SIFEGA</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.argentina.gob.ar/anmat/codigoalimentario"
+              target="_blank"
+              >Código Alimentario Arg.</a
+            >
+          </li>
+          <li><a href="https://www.argentina.gob.ar/anmat" target="_blank">ANMAT</a></li>
+        </ul>
+
+        <!-- NOTICIAS -->
+        <div class="noticias-adn">
+          <h2>Noticias</h2>
+          <div id="lista-noticias-rn"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span class="izquierda"
+        >&copy; 2025 Laboratorio Regional de Salud Ambiental – Villa Regina</span
+      >
+      <span class="derecha"
+        >Desarrollado por
+        <a
+          href="https://pompone.github.io/CV_Pompone.github.io/#inicio"
+          target="_blank"
+          >Alejandro M. Pompone</a
+        ></span
+      >
+    </div>
+  </footer>
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button id="btn-top" aria-label="Volver arriba" class="top-pill">↑ Arriba</button>
+
+  <!-- SCRIPTS GENERALES -->
+  <script src="js/noticias.js"></script>
+  <script src="js/formularios.js"></script>
+  <script src="js/calendario.js"></script>
+  <script src="js/js.js"></script>
+  <script src="js/temp.js"></script>
+  
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a
+    href="https://wa.me/5492984231275"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Contactanos por WhatsApp"
+  >
+    <img src="img/whatapp.png" alt="WhatsApp" />
+  </a>
+</body>
+</html>

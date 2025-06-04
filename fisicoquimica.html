@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Físicoquímica – Laboratorio Regional Salud Ambiental</title>
+
+  <!-- Fuentes & estilos globales -->
+  <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/areas.css" />  
+  <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo-titulo">
+        <div class="logo"><img src="img/logo.jpg" alt="Logo" /></div>
+        <h1 class="titulo">Laboratorio Regional de Salud Ambiental Villa Regina</h1>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <div class="menu-hamburguesa" id="menu-hamburguesa">&#9776;</div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="#">Sectores</a>
+            <div class="submenu">
+              <a href="microbiologia.html">Microbiología</a>
+              <a href="fisicoquimica.html">Físicoquímica</a>
+              <a href="uresa.html">URESA</a>
+            </div>
+          </li>
+          <li><a href="quienesSomos.html">¿Quiénes somos?</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="social-icons-top-right">
+      <a href="https://www.facebook.com/LabSalAmbVR" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="container">
+      <section class="contenido">
+        <h2>Área de Físicoquímica</h2>
+        <p>El área de Físicoquímica realiza análisis destinados al control de calidad de aguas, alimentos en general. Verificando tanto la seguridad como la calidad de los alimentos, según lo estipula el Código Alimentario Argentino. </p>
+
+        <!-- ========== Galería ========== -->
+        <h3>Galería del laboratorio</h3>
+        <div class="slideshow">
+          <img src="img/fisico1.webp" class="slide activo" alt="Fluoruros" />
+          <img src="img/fisico2.webp" class="slide" alt="Nitritos" />
+          <img src="img/fisico3.webp" class="slide" alt="Espectrofotómetro" />
+          <img src="img/fisico4.webp" class="slide" alt="Balanza analítica" />
+          <img src="img/fisico5.webp" class="slide" alt="pH‑metro" />
+        </div>
+
+        <!-- ========== Bloques de Ensayos ========== -->
+        
+        <div class="bloque-doble">
+          <!-- Bloque 1 -->
+          <div class="bloque">
+            <h3>Parámetros físicos más frecuentes </h3>
+            <ul>
+              <li>Determinación de pH y conductividad</li>
+              <li>Determinación de azucares reductores totales.</li>
+              <li>Sólidos totales, disueltos y suspendidos</li>
+              <li>acidez total y volatil.</li>
+              <li>Determinación de etanol y metanol.</li>
+              <li>Determinación de NO3, NO2, Hierro, Arsénico, cloruros, Dureza, Alcalinidad.</li>
+              <li>Determinación de Manganeso, Magnesio, Calcio.</li>
+            </ul>
+          </div>
+
+          <!-- Bloque 2 -->
+          <div class="bloque">
+            <h3>Alimentos Frecuentemente analizados</h3>
+            <ul>
+              <li>Bebidas Alcoholicas y analcoholicas</li>
+              <li>Aguas </li>
+              <li>Dulces, mermeladas</li>
+              <li>Pastas, especias</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Recolección de muestra de Agua </h3>
+        <ol class="lista-parentesis">
+          <li>Utilizar una botella de plástico vácia de agua mineral, limpia y sin olores extraños.
+          </li>
+          <li>Coloque el agua a analizar dentro de la botella, enjuggue 3 veces y eliminar el contenido.
+          </li>
+          <li>Por último llenar la botella hasta el cuello con el agua a analizar y tapar.
+          </li>
+          
+        </ol>
+
+        <div class="descarga-titulo-boton">
+          <p>Puede bajar el instructivo completo</p>
+          <a href="img/instructivo.pdf" download class="boton-descarga-peque" target="_blank">Descargar</a>
+        </div>
+
+        <p> Si posee alguna duda puntual, puede comunicarse con el sector completando el formulario.</p>
+        <!-- ========== Responsable ========== -->
+        <h3>Responsable</h3>
+        <p>Lic. Alejandro Martín Pompone</p>
+
+        <!-- ========== Formulario de contacto ========== -->
+        <h3 id="contacto">Formulario de contacto</h3>
+        <form id="fq-form" class="contacto-form" action="https://formspree.io/f/xdkggean" method="POST" data-success="¡Mensaje enviado desde Físicoquímica con éxito!">
+          <input type="hidden" name="formName" value="Físicoquímica" />
+          <input type="hidden" name="_subject" value="Nuevo mensaje – Físicoquímica" />
+
+          <div class="form-group">
+            <label for="fq-nombre">Nombre:</label>
+            <input type="text" id="fq-nombre" name="nombre" placeholder="Tu nombre" required minlength="2" />
+          </div>
+
+          <div class="form-group">
+            <label for="fq-email">Email:</label>
+            <input type="email" id="fq-email" name="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="fq-mensaje">Mensaje:</label>
+            <textarea id="fq-mensaje" name="mensaje" placeholder="Escribí tu mensaje…" required minlength="10"></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+
+        <script src="js/formularios.js"></script>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span class="izquierda">&copy; 2025 Laboratorio Regional de Salud Ambiental – Villa Regina</span>
+      <span class="derecha">Desarrollado por <a href="https://pompone.github.io/CV_Pompone.github.io/#inicio" target="_blank">Alejandro M. Pompone</a></span>
+    </div>
+  </footer>
+
+  <button id="btn-top" aria-label="Volver arriba" class="top-pill">↑ Arriba</button>
+
+  <script src="js/js.js"></script>
+</body>
+</html>

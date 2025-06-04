@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URESA – Laboratorio Regional de Salud Ambiental</title>
+
+  <!-- Fuentes y CSS globales -->
+  <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/areas.css" />
+  <link rel="stylesheet" href="css/formulario.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo-titulo">
+        <div class="logo"><img src="img/logo.jpg" alt="Logo" /></div>
+        <h1 class="titulo">Laboratorio Regional de Salud Ambiental Villa Regina</h1>
+      </div>
+
+      <!-- Botón hamburguesa -->
+      <div class="menu-hamburguesa" id="menu-hamburguesa">&#9776;</div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="#">Sectores</a>
+            <div class="submenu">
+              <a href="microbiologia.html">Microbiología</a>
+              <a href="fisicoquimica.html">Físicoquímica</a>
+              <a href="uresa.html">URESA</a>
+            </div>
+          </li>
+          <li><a href="quienesSomos.html">¿Quiénes somos?</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="social-icons-top-right">
+      <a href="https://www.facebook.com/LabSalAmbVR" target="_blank" aria-label="Facebook" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <div class="container">
+      <section class="contenido">
+        <h2>Área URESA</h2>
+        <p>Las Unidades Regionales de Epidemiología y Salud Ambiental (URESA) trabajan en distintas zonas de la provincia para cuidar la salud pública desde la prevención. Su objetivo principal es evitar que las personas lleguen al hospital actuando antes de que aparezcan enfermedades.</p>
+
+        <h3>Actividades que se realizan</h3>
+        <div class="bloques-uresa">
+          <!-- ZOONOSIS -->
+          <a class="bloque enlace-bloque" href="https://rionegro.gov.ar/?contID=62031" target="_blank" rel="noopener" aria-label="Ir al sitio del Ministerio de Zoonosis de Río Negro (se abre en pestaña nueva)">
+            <h3>Zoonosis <i class="fas fa-dog icono"></i></h3>
+            <p>Prevención y control de enfermedades transmitidas por animales.</p>
+          </a>
+
+          <!-- ALIMENTO -->
+          <button class="bloque bloque-btn" data-modal="#img-modal-alimento" type="button">
+            <h3>Alimento <i class="fas fa-apple-alt icono"></i></h3>
+            <p>Inscripción y vigilancia de productos alimenticios.</p>
+          </button>
+
+          <!-- RES -->
+          <button class="bloque bloque-btn" data-modal="#img-modal-res" type="button">
+            <h3>RES <i class="fas fa-dumpster icono"></i></h3>
+            <p>Inscripción como generador o no generador de RES.</p>
+          </button>
+
+          <!-- NATATORIOS -->
+          <button class="bloque bloque-btn" data-modal="#img-modal-natatorios" type="button">
+            <h3>Natatorios <i class="fas fa-swimming-pool icono"></i></h3>
+            <p>Registra tu natatorio en el registro provincial de natatorios.</p>
+          </button>
+        </div>
+
+        <p class="coordinadora">Coordinadora URESA Alto Valle Este – M.V. Natalia Fantini</p>
+
+        <h3 id="contacto">Formulario de contacto</h3>
+        <form id="uresa-form" class="contacto-form" action="https://formspree.io/f/xovdgnoe" method="POST" data-success="¡Mensaje enviado desde URESA con éxito!">
+          <input type="hidden" name="formName" value="URESA" />
+          <input type="hidden" name="_subject" value="Nuevo mensaje – URESA" />
+
+          <div class="form-group">
+            <label for="uresa-nombre">Nombre:</label>
+            <input type="text" id="uresa-nombre" name="nombre" placeholder="Tu nombre" required minlength="2" maxlength="50" title="Debe tener entre 2 y 50 caracteres.">
+          </div>
+
+          <div class="form-group">
+            <label for="uresa-email">Email:</label>
+            <input type="email" id="uresa-email" name="email" placeholder="tucorreo@ejemplo.com" required title="Ingresa una dirección de email válida.">
+          </div>
+
+          <div class="form-group">
+            <label for="uresa-mensaje">Mensaje:</label>
+            <textarea id="uresa-mensaje" name="mensaje" placeholder="Escribí tu mensaje…" required minlength="10" maxlength="500" title="Tu mensaje debe tener entre 10 y 500 caracteres."></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <span class="izquierda">&copy; 2025 Laboratorio Regional de Salud Ambiental – Villa Regina</span>
+      <span class="derecha">Desarrollado por <a href="https://pompone.github.io/CV_Pompone.github.io/#inicio" target="_blank" rel="noopener">Alejandro M. Pompone</a></span>
+    </div>
+  </footer>
+
+  <!-- BOTÓN VOLVER ARRIBA -->
+  <button id="btn-top" aria-label="Volver arriba" class="top-pill">↑ Arriba</button>
+
+  <!-- MODALES DE IMAGEN -->
+  <div id="img-modal-alimento" class="img-modal" aria-hidden="true">
+    <div class="img-modal-content">
+      <img src="img/uresa_alimento.webp" alt="Inscripción y vigilancia de productos alimenticios">
+      <button class="img-modal-close" aria-label="Cerrar imagen">&times;</button>
+    </div>
+  </div>
+
+  <div id="img-modal-res" class="img-modal" aria-hidden="true">
+    <div class="img-modal-content">
+      <img src="img/uresa_res.webp" alt="Gestión de residuos especiales de salud">
+      <button class="img-modal-close" aria-label="Cerrar imagen">&times;</button>
+    </div>
+  </div>
+
+  <div id="img-modal-natatorios" class="img-modal" aria-hidden="true">
+    <div class="img-modal-content">
+      <img src="img/uresa_natatorio.webp" alt="Registro provincial de natatorios">
+      <button class="img-modal-close" aria-label="Cerrar imagen">&times;</button>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/js.js"></script>
+  <script src="js/formularios.js"></script>
+  <script src="js/uresa.js"></script>
+</body>
+</html>
