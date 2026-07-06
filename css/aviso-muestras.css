@@ -1,0 +1,41 @@
+.aviso-muestras-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, .35);
+}
+
+.aviso-muestras-card {
+  max-width: 520px;
+  width: 100%;
+  background: #fff;
+  color: #333;
+  border-left: 8px solid #b3d236;
+  border-radius: .75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.aviso-muestras-card p {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+}
+
+.aviso-muestras-card button {
+  border: none;
+  border-radius: .5rem;
+  background: #6b9f1f;
+  color: #fff;
+  padding: .65rem 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.aviso-muestras-card button:hover {
+  background: #4d7a14;
+}
