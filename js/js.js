@@ -54,3 +54,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+/* Aviso temporal de recepción de muestras */
+document.addEventListener('DOMContentLoaded', () => {
+  const cssAviso = document.createElement('link');
+  cssAviso.rel = 'stylesheet';
+  cssAviso.href = 'css/aviso-muestras.css';
+  document.head.appendChild(cssAviso);
+
+  const aviso = document.createElement('div');
+  aviso.className = 'aviso-muestras-overlay';
+  aviso.setAttribute('role', 'alert');
+  aviso.setAttribute('aria-live', 'assertive');
+
+  const tarjeta = document.createElement('div');
+  tarjeta.className = 'aviso-muestras-card';
+
+  const texto = document.createElement('p');
+  texto.innerHTML = '<strong>Atención:</strong> Por razones de falta de personal, el laboratorio no está recibiendo muestras.';
+
+  const botonCerrar = document.createElement('button');
+  botonCerrar.type = 'button';
+  botonCerrar.textContent = 'Entendido';
+  botonCerrar.addEventListener('click', () => aviso.remove());
+
+  tarjeta.appendChild(texto);
+  tarjeta.appendChild(botonCerrar);
+  aviso.appendChild(tarjeta);
+  document.body.appendChild(aviso);
+});
