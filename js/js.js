@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const cssAviso = document.createElement('link');
   cssAviso.rel = 'stylesheet';
-  cssAviso.href = 'css/aviso-muestras.css';
+  cssAviso.href = 'css/aviso-muestras.css?v=2';
   document.head.appendChild(cssAviso);
 
   const aviso = document.createElement('div');
